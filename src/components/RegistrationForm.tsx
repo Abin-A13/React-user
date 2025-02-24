@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import InputField from "./InputField";
 import { useUserContext } from "../UserContext";
-
-const API_URL = "http://16.170.163.157/users"; // Update with your actual API URL
+import { API_URL } from "../../config";
 
 const RegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState({ first_name: "", last_name: "", email: "" });

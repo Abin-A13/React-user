@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { API_URL } from "../config";
 
 interface User {
   id?: number; // Optional id field, if provided by your backend
@@ -17,7 +18,7 @@ interface UserContextType {
   getUserById: (id: number) => Promise<User | null>;
 }
 
-const API_URL = "http://16.170.163.157/users"; 
+
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
