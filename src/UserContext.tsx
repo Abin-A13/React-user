@@ -32,7 +32,11 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       const response = await axios.get(API_URL);
       setUsers(response.data);
     } catch (err) {
-      console.error("Error fetching users:", err);
+      if (axios.isAxiosError(err)) {
+        console.error("Axios error adding user:", err.response?.data || err.message);
+      } else {
+        console.error("Error adding user:", err);
+      }
       setError(err instanceof Error ? err.message : "Unknown error");
     }
   };
