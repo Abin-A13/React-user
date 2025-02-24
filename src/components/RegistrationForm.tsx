@@ -4,7 +4,7 @@ import axios from "axios";
 import InputField from "./InputField";
 import { useUserContext } from "../UserContext";
 
-const API_URL = "http://localhost:8000/users"; // Update with your actual API URL
+const API_URL = "http://16.170.163.157/users"; // Update with your actual API URL
 
 const RegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState({ first_name: "", last_name: "", email: "" });

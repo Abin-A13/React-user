@@ -17,7 +17,7 @@ interface UserContextType {
   getUserById: (id: number) => Promise<User | null>;
 }
 
-const API_URL = "http://localhost:8000/users"; 
+const API_URL = "http://16.170.163.157/users"; 
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
